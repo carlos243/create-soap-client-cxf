@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cl.carlos.utils</groupId>
+    <artifactId>create-soap-client-cxf</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <properties>
+        <cxf.version>3.2.0</cxf.version>
+        <!-- 1. cambiar la url o ubicación local del WSDL -->
+        <!-- 2. ejecutar en la carpeta incial mvn compile -P create-soap-sources -->
+        <!-- 3. en la carpeta java se generaran archivos terminados en _Client esos son los clientes -->
+        <wsdl.location>http://www.webservicex.com/globalweather.asmx?WSDL</wsdl.location>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.cxf.xjc-utils</groupId>
+            <artifactId>cxf-xjc-runtime</artifactId>
+            <version>3.2.0</version>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>create-soap-sources</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-codegen-plugin</artifactId>
+                        <version>${cxf.version}</version>
+                        <executions>
+                            <execution>
+                                <id>generate-sources</id>
+                                <phase>generate-sources</phase>
+                                <configuration>
+                                    <sourceRoot>${project.basedir}/src/main/java/</sourceRoot>
+                                    <wsdlOptions>
+                                        <wsdlOption>
+                                            <wsdl>${wsdl.location}</wsdl>
+                                            <extraargs>
+                                                <extraarg>-client</extraarg>
+                                            </extraargs>
+                                        </wsdlOption>
+                                    </wsdlOptions>
+                                </configuration>
+                                <goals>
+                                    <goal>wsdl2java</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>
