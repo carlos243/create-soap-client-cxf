@@ -42,6 +42,7 @@
                                             <wsdl>${wsdl.location}</wsdl>
                                             <extraargs>
                                                 <extraarg>-client</extraarg>
+                                                <extraarg>-keep</extraarg>
                                             </extraargs>
                                         </wsdlOption>
                                     </wsdlOptions>

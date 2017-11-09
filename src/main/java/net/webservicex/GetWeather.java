@@ -1,14 +1,18 @@
 
 package net.webservicex;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Clase Java para anonymous complex type.
- * <p>
+ * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- * <p>
+ * 
  * <pre>
  * &lt;complexType&gt;
  *   &lt;complexContent&gt;
@@ -21,11 +25,13 @@ import javax.xml.bind.annotation.*;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-        "cityName",
-        "countryName"
+    "cityName",
+    "countryName"
 })
 @XmlRootElement(name = "GetWeather")
 public class GetWeather {
@@ -37,9 +43,11 @@ public class GetWeather {
 
     /**
      * Obtiene el valor de la propiedad cityName.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getCityName() {
         return cityName;
@@ -47,9 +55,11 @@ public class GetWeather {
 
     /**
      * Define el valor de la propiedad cityName.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setCityName(String value) {
         this.cityName = value;
@@ -57,9 +67,11 @@ public class GetWeather {
 
     /**
      * Obtiene el valor de la propiedad countryName.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getCountryName() {
         return countryName;
@@ -67,9 +79,11 @@ public class GetWeather {
 
     /**
      * Define el valor de la propiedad countryName.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setCountryName(String value) {
         this.countryName = value;

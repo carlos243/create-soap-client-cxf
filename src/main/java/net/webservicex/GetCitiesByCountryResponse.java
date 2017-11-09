@@ -1,14 +1,18 @@
 
 package net.webservicex;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Clase Java para anonymous complex type.
- * <p>
+ * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
- * <p>
+ * 
  * <pre>
  * &lt;complexType&gt;
  *   &lt;complexContent&gt;
@@ -20,10 +24,12 @@ import javax.xml.bind.annotation.*;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-        "getCitiesByCountryResult"
+    "getCitiesByCountryResult"
 })
 @XmlRootElement(name = "GetCitiesByCountryResponse")
 public class GetCitiesByCountryResponse {
@@ -33,9 +39,11 @@ public class GetCitiesByCountryResponse {
 
     /**
      * Obtiene el valor de la propiedad getCitiesByCountryResult.
-     *
-     * @return possible object is
-     * {@link String }
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getGetCitiesByCountryResult() {
         return getCitiesByCountryResult;
@@ -43,9 +51,11 @@ public class GetCitiesByCountryResponse {
 
     /**
      * Define el valor de la propiedad getCitiesByCountryResult.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setGetCitiesByCountryResult(String value) {
         this.getCitiesByCountryResult = value;
